@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Hospital Santa María</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#10b981',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <div class="flex h-screen">
+        <aside class="w-64 bg-white dark:bg-gray-800 shadow-md">
+            <div class="p-4">
+                <h1 class="text-2xl font-bold text-primary">HIS</h1>
+            </div>
+            <nav class="mt-5">
+                <ul class="space-y-2">
+                    <li><a href="#" class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all duration-200" data-page="dashboard">Inicio</a></li>
+                    <li><a href="#" class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all duration-200" data-page="patients">Pacientes</a></li>
+                    <li><a href="#" class="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-all duration-200" data-page="add-patient">Agregar Paciente</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="flex-1 overflow-y-auto">
+            <header class="bg-white dark:bg-gray-800 shadow-md p-4 flex justify-between items-center">
+                <h2 class="text-xl font-semibold" id="page-title">Dashboard</h2>
+                <div class="flex items-center">
+                    <label class="inline-flex items-center mb-5 cursor-pointer">
+                        <input type="checkbox" value="" id="theme-toggle" class="sr-only peer">
+                        <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:w-5 after:h-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
+                        <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Tema</span>
+                      </label>
+                </div>
+            </header>
+            <div id="content" class="p-6">
+            </div>
+        </main>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>
